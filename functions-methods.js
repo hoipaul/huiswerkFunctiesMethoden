@@ -12,6 +12,7 @@
 function getEmailDomain(email) {
     return email.substring(email.indexOf("@") + 1);
 }
+
 const domainName = getEmailDomain("t.mellink@novi.nl");
 console.log(domainName);
 
@@ -35,7 +36,7 @@ function typeOfEmail(email) {
         return "Medewerker";
     }
     else {
-        return "Extern"
+        return "Extern";
     }
 }
 
@@ -63,7 +64,8 @@ console.log(typeOfEmail("a.wiersma@outlook.com"));
 function checkEmailValidity(mailAdress) {
     return mailAdress.includes("@") && !mailAdress.includes(",") && mailAdress.slice(-1) !== ".";
 }
-// slice(-1) geeft laatste karakter van string
+
+// slice(-1) geeft het laatste karakter van de string
 
 console.log(checkEmailValidity("n.eeken@novi.nl"));
 console.log(checkEmailValidity("tessmellink@novi.nl"));
